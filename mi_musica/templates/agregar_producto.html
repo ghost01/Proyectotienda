@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Agregar producto</title>
+</head>
+
+<body>
+	
+	
+		<form action="" method="POST" enctype="multipart/forma-data">
+			{% csrf_token %}
+			{{ formulario.as_p }}
+			<input type="submit" value="Agregar Producto">
+		</form>
+
+</body>
+</html>

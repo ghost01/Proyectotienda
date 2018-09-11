@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mis gustos y algo más</title>
+</head>
+<body style="background-color:#7bceeb;">
+<h1>Funcionando</h1>
+	{% if info_enviado %}
+		<h2>La informacion suministrada es:</h2>
+	{{email}}
+	<p>Con título:</p>
+	{{title}}
+	<p>con un Texto:</p>
+	{{text}}
+	<p>Con una fecha:</p>
+	{{time}}
+	{% else %}
+<form action="" method="POST">
+	{% csrf_token %}
+	{{formulario.as_p}}
+	<input type="submit" value="Enviar"></input>
+
+</form>
+	{% endif %}
+</body>
+</html>
