@@ -25,7 +25,7 @@ SECRET_KEY = 'bhky@s)3^e*!%#67t-e4dw#co0yo+@2axc(n0694!=5(#9x%jz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['adsitienda3.herokuapp.com']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'webservices',
     'rest_framework',
     'home',
+    'gunicorn',
     
 ]
 
@@ -122,7 +123,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
